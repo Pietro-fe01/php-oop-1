@@ -49,12 +49,24 @@ main .films-container{
 main .films-container .film{
     padding: 20px 0;
     width: calc(100% / 3 - 30px);
-    margin: 0 15px;
+    margin: 0 15px;   
+}
+
+main .films-container .film__info{
+    line-height: 30px;
 }
 
 main .films-container .film__image img{
     width: 60%;
     height: 300px;
+}
+
+main .film__info .film__genres{
+    display: flex;
+}
+
+main .film__info .film__genres strong {
+    margin-right: .5rem;
 }
 
 /*---------------------------

@@ -32,19 +32,25 @@
                         <div class="film__info">
                             <h2 class="film__title"><?php echo $film->getTitle(); ?></h2>
                             <p class="film__genres">
-                                <strong>Genres : </strong>
-                                <?php foreach ($film->getGenres() as $genre) { echo $genre . ', '; } ?>
+                                <strong>Genres: </strong>
+                                <?php foreach ($film->getGenres() as $i => $genre) {
+                                    if(count($film->getGenres()) - 1 == $i){
+                                        echo $genre . '.';
+                                    } else {
+                                        echo $genre . ', ';
+                                    }
+                                } ?>
                             </p>
                             <small class="film__year">
-                                <strong>Publish date : </strong>
-                                <?php echo $film->getPublishYear(); ?>
+                                <strong>Publish date: </strong>
+                                <?php echo ($film->getPublishYear()) ? $film->getPublishYear() : "Any date provided" ?>
                             </small>
                             <div class="film__review">
-                                <strong>Reviews : </strong>
+                                <strong>Reviews: </strong>
                                 <?php echo $film->getReviews(); ?>
                             </div>
                             <p class="film__description">
-                                <strong>Description : </strong>
+                                <strong>Description: </strong>
                                 <?php echo $film->getDescription(); ?>
                             </p>
                         </div>
