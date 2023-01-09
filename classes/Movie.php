@@ -12,7 +12,8 @@
             $this->setVoting($_vote);
         }
 
-        public function setVoting($vote){
+        // Based on review it prints the relevant sentence
+        private function setVoting($vote){ 
             switch ($vote) {
                 case 1:
                     $this->review = "Terrible";

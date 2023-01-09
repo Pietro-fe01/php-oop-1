@@ -13,13 +13,20 @@
 // - creando un file dedicato ai dati (tipo le array di oggetti) che potremmo chiamare db.php
 // - mettendo ciascuna classe nel proprio file e magari raggruppare tutte le classi in una cartella dedicata che possiamo chiamare classes/
 // - organizzando il layout dividendo la struttura ed i contenuti in file e parziali dedicati.
-    require_once __DIR__ . '/classes/Movie.php';
     
+    require_once __DIR__ . '/classes/Movie.php';
+
     $back_to_the_future = new Movie(
-        'Ritorno al futuro', // Title
+        'Back to the Future', // Title
         ['Fantasy', 'Comedy', 'Romance', 'Adventure', 'Science fiction'], // Genres
         4 // Vote review
     );
 
-    var_dump($back_to_the_future);
+    $in_time = new Movie(
+        'In Time', // Title
+        ['Action', 'Drama', 'Crime fiction', 'Thriller', 'Science fiction', 'Melodrama'], // Genres
+        5 // Vote review
+    );
+
+    var_dump($back_to_the_future, $in_time);
 ?>
