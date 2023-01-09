@@ -1,0 +1,64 @@
+/*---------------------------
+    RESET 
+----------------------------*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #141414;
+    color: white;
+}
+
+header, footer{
+    background-color: black;
+    height: 3.125rem;
+    text-align: center;
+    line-height: 3.125rem;
+}
+
+/*---------------------------
+    COMMONS 
+----------------------------*/
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/*---------------------------
+    HEADER 
+----------------------------*/
+header {
+}
+
+/*---------------------------
+    MAIN 
+----------------------------*/
+main{
+    height: calc(100vh - 100px);
+}
+
+main .films-container{
+    height: calc(100vh - 100px);
+    display: flex;
+}
+
+main .films-container .film{
+    padding: 20px 0;
+    width: calc(100% / 3 - 30px);
+    margin: 0 15px;
+}
+
+main .films-container .film__image img{
+    width: 60%;
+    height: 300px;
+}
+
+/*---------------------------
+    FOOTER 
+----------------------------*/
+footer{
+}

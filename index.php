@@ -18,8 +18,43 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <header></header>
-        <main></main>
-        <footer></footer>
+        <header>
+            <h1>PHP OOP FILMS</h1>
+        </header>
+
+        <main>
+            <section class="films-container container">
+                <?php foreach ($films as $key => $film) {?>
+                    <div class="film">
+                        <div class="film__image">
+                            <img src="<?php echo $film->getFilmCover() ?>" alt="image">
+                        </div>
+                        <div class="film__info">
+                            <h2 class="film__title"><?php echo $film->getTitle(); ?></h2>
+                            <p class="film__genres">
+                                <strong>Genres : </strong>
+                                <?php foreach ($film->getGenres() as $genre) { echo $genre . ', '; } ?>
+                            </p>
+                            <small class="film__year">
+                                <strong>Publish date : </strong>
+                                <?php echo $film->getPublishYear(); ?>
+                            </small>
+                            <div class="film__review">
+                                <strong>Reviews : </strong>
+                                <?php echo $film->getReviews(); ?>
+                            </div>
+                            <p class="film__description">
+                                <strong>Description : </strong>
+                                <?php echo $film->getDescription(); ?>
+                            </p>
+                        </div>
+                    </div>
+                <?php } ?> 
+            </section>
+        </main>
+
+        <footer>
+            <h4>Copyrights</h4>
+        </footer>
     </body>
 </html>
