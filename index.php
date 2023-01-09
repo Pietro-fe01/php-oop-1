@@ -14,14 +14,42 @@
 // - mettendo ciascuna classe nel proprio file e magari raggruppare tutte le classi in una cartella dedicata che possiamo chiamare classes/
 // - organizzando il layout dividendo la struttura ed i contenuti in file e parziali dedicati.
 
-class Movie {
-    public $title;
-    public $genre;
-    public $publish_year;
-    public $vote;  
-}
+    class Movie {
+        private $title;
+        private $genre;
+        public $publish_year;
+        private $review;
+        
+        function __construct(string $_title, string $_genre, int $_vote){
+            $this->title = $_title;
+            $this->genre = $_genre;
+            $this->setVoting($_vote);
+        }
 
-$back_to_the_future = new Movie();
+        public function setVoting($vote){
+            switch ($vote) {
+                case 1:
+                    $this->review = "Terrible";
+                    break;
+                case 2:
+                    $this->review = "Very bad";
+                    break;
+                case 3:
+                    $this->review = "Good";
+                    break;
+                case 4:
+                    $this->review = "Very good";
+                    break;
+                case 5:
+                    $this->review = "Awesome";
+                    break;
+                default: 
+                    throw new Exception("ERROR: THE VOTE MUST BE BETWEEN 1 AND 5", 1);
+            }
+        } 
+    }
 
-var_dump($back_to_the_future);
+    $back_to_the_future = new Movie('Ritorno al futuro', 'Fantasy', 4);
+
+    var_dump($back_to_the_future);
 ?>
