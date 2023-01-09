@@ -3,7 +3,7 @@
     class Movie {
         private $title;
         private $genre;
-        public int $publish_year;
+        private $publish_year;
         private $review;
         
         function __construct(string $_title, array $_genre, int $_vote){
@@ -33,5 +33,14 @@
                 default: 
                     throw new Exception("ERROR: THE VOTE MUST BE BETWEEN 1 AND 5", 1);
             }
-        } 
+        }
+
+        // Set publish year
+        public function setPublishYear(int $_year){
+            $this->publish_year = $_year;
+        }
+        // Get publish year
+        public function getPublishYear(){
+            return $this->publish_year;
+        }
     }

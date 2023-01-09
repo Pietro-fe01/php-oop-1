@@ -11,3 +11,4 @@
         ['Action', 'Drama', 'Crime fiction', 'Thriller', 'Science fiction', 'Melodrama'], // Genres
         5 // Vote review
     );
+    $in_time->setPublishYear(2011);
