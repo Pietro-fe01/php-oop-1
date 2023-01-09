@@ -5,6 +5,7 @@
         private $genre;
         private $publish_year;
         private $review;
+        private $description = 'No description provided';
         
         function __construct(string $_title, array $_genre, int $_vote){
             $this->title = $_title;
@@ -42,5 +43,14 @@
         // Get publish year
         public function getPublishYear(){
             return $this->publish_year;
+        }
+
+        // Set description
+        public function setDescription(string $_description){
+            $this->description = $_description;
+        }
+        // Get description
+        public function getDescription(){
+            return $this->description;
         }
     }
