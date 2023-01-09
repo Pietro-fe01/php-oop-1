@@ -5,5 +5,5 @@
     require_once __DIR__ . '/classes/Movie.php';
     require_once __DIR__ . '/data/db.php';
 
-    var_dump($back_to_the_future, $in_time);
+    var_dump($films);
 ?>

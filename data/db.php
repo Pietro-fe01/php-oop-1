@@ -1,5 +1,5 @@
-<?php // All objects deriving from the Movie class will go here
-
+<?php 
+    // All objects deriving from the Movie class will go here
     $back_to_the_future = new Movie(
         'Back to the Future', // Title
         ['Fantasy', 'Comedy', 'Romance', 'Adventure', 'Science fiction'], // Genres
@@ -12,3 +12,9 @@
         5 // Vote review
     );
     $in_time->setPublishYear(2011);
+
+    // Every film is pushed inside the array 'films'
+    $films = [
+        $back_to_the_future,
+        $in_time
+    ];
