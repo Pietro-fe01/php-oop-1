@@ -49,7 +49,8 @@ main .films-container{
 main .films-container .film{
     padding: 20px 0;
     width: calc(100% / 3 - 30px);
-    margin: 0 15px;   
+    margin: 0 15px;
+    text-align: center;
 }
 
 main .films-container .film__info{
@@ -57,16 +58,10 @@ main .films-container .film__info{
 }
 
 main .films-container .film__image img{
-    width: 60%;
+    width: 100%;
+    object-fit: contain;
     height: 300px;
-}
-
-main .film__info .film__genres{
-    display: flex;
-}
-
-main .film__info .film__genres strong {
-    margin-right: .5rem;
+    margin-bottom: .3125rem;
 }
 
 /*---------------------------

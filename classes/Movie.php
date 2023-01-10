@@ -8,7 +8,7 @@
         private $review;
         private $description = 'No description provided';
         
-        function __construct(string $_cover_image, string $_title, array $_genre, int $_vote){
+        public function __construct(string $_cover_image, string $_title, array $_genre, int $_vote){
             $this->cover_image = $_cover_image;
             $this->title = $_title;
             $this->genre = $_genre;
